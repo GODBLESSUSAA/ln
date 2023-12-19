@@ -1,0 +1,68 @@
+.action-icon {
+    width: 20px;
+    height: 20px;
+}
+
+input {
+    font-family: inherit;
+    background: transparent;
+}
+
+input, button {
+    outline: none;
+    border: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+#position-table thead tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.50);
+}
+
+#position-table th {
+    color: white;
+    padding-top: 14px !important;
+    padding-bottom: 9px !important;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130.8%; /* 20.928px */
+}
+
+#position-table tbody td {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130.8%; /* 17.004px */
+    height: 50px;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+}
+
+#account-table tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.50);
+}
+
+#account-table th {
+    color: white;
+    padding-top: 37px !important;
+    padding-bottom: 28px !important;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130.8%; /* 20.928px */
+}
+
+#account-table tbody td {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130.8%; /* 17.004px */
+    height: 64px;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+}

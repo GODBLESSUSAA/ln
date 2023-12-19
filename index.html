@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="en" data-scrapbook-source="https://lemonterminal.com/" data-scrapbook-create="20231219214700980"
+    data-scrapbook-title="Lemon Terminal">
+
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description"
+        content="Your AIO Hub for off-chain and on-chain magic. Uniting CEX, News Trading, Futures, On-chain, Private chats, &amp; more.">
+    <link rel="manifest" href="https://lemonterminal.com/manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <title>Lemon Terminal</title>
+    <link href="main.038bc13f.css" rel="stylesheet">
+    <script defer="defer" src="js/vendors.js"></script>
+    <script defer="defer" src="js/contracts.js"></script>
+    <script defer="defer" src="js/main.js"></script>
+  
+    <script>
+      window.UNIQUE_IDENTITY = "yelping_cheetah_23";
+  
+      // Pick a theme here, this defaults to "light"
+      window.modal_theme = "dark";
+  
+      // https://docs.walletconnect.com/2.0/web/web3modal/html/wagmi/theming
+      window.modal_variables = { "--w3m-z-index": "99999999999999999999999999999999",
+        // Example of what you can do:
+        "--w3m-accent-color": "#dde339",
+        "--w3m-background-color": "#dde339",
+        "--w3m-background-border-radius": "0px",
+        "--w3m-container-border-radius": "0px",
+        "--w3m-wallet-icon-border-radius": "0px",
+        "--w3m-wallet-icon-large-border-radius": "0px",
+        "--w3m-wallet-icon-small-border-radius": "0px",
+        "--w3m-secondary-button-border-radius": "0px",
+        "--w3m-icon-button-border-radius": "0px",
+        "--w3m-button-hover-highlight-border-radius": "0px",
+        "--w3m-input-border-radius": "0px",
+      };
+  
+      window.popups = {
+        PENDING: {
+          title: "Claim Pending",
+          text: "Approve the prompt in order to claim $LEMON Revenue Share.",
+        },
+        INVALID: {
+          title: "Ineligible Address",
+          text: "The connected account is not eligible for $LEMON Revenue Share.\nPlease try using a different account.",
+        },
+      };
+  
+      window.OVERRIDE_MODE = false;
+    </script>
+  </head>
+
+<body style="background-color: rgb(245, 245, 245);"><noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root" class="">
+        <div class="navbar Navbar_navbar__PyJEv bg-white dark:bg-[#1c1c1b] text-black dark:text-white"><button
+                class="flex justify-between bg-transparent p-0 w-full xl1:w-auto"><a
+                    style="display: flex; gap: 10px; justify-content: center; align-items: center; text-decoration: none;"
+                    href=""><img src="7eeb41f3f43efec66ef2e618ef66ee3ca6d78e3f.png" alt="" style="height: 35px;">
+                    <h1 class="Navbar_title__-20LQ text-black dark:text-white">Lemon Terminal</h1>
+                </a><button type="button" class="Navbar_mobileNavToggle__1LAbj text-black dark:text-white"
+                    aria-controls="primary-navigation">
+                    <div class="flex flex-col space-y-2 w-[35px]">
+                        <div class="bg-black dark:bg-white h-[3px]"></div>
+                        <div class="bg-black dark:bg-white h-[3px]"></div>
+                        <div class="bg-black dark:bg-white h-[3px]"></div>
+                    </div>
+                </button></button>
+            <nav class="Navbar_primaryNavigation__5zo53 bg-white dark:bg-[#1c1c1b] ">
+                <div class="Navbar_buttons__a1PTM" style="justify-content: center;"><a
+                        href="https://docs.lemonterminal.com/" target="_blank" rel="noopener noreferrer"><button
+                            class="h-full text-black dark:text-white hover:text-[#F6DC00] dark:hover:text-[#FEFF4A]"
+                            style="font-family: DM Mono; background-color: transparent; border-radius: 20px; border: medium; padding: 5px; cursor: pointer; font-size: 20px; font-weight: 500; line-height: 26px; letter-spacing: 0em; text-align: center; transition: color 0.3s ease 0s;">Docs</button></a><a
+                        href="https://etherscan.io/token/0x0E13914F4fE838E96346CE42f588193eb17D92b6" target="_blank"
+                        rel="noopener noreferrer"><button
+                            class="h-full text-black dark:text-white hover:text-[#F6DC00] dark:hover:text-[#FEFF4A]"
+                            style="font-family: DM Mono; background-color: transparent; border-radius: 20px; border: medium; padding: 5px; cursor: pointer; font-size: 20px; font-weight: 500; line-height: 26px; letter-spacing: 0em; text-align: center; transition: color 0.3s ease 0s;">$LEMON</button></a><a
+                        href="https://lemonterminal.com/calendar" rel="noopener noreferrer"><button
+                            class="h-full text-black dark:text-white hover:text-[#F6DC00] dark:hover:text-[#FEFF4A]"
+                            style="font-family: DM Mono; background-color: transparent; border-radius: 20px; border: medium; padding: 5px; cursor: pointer; font-size: 20px; font-weight: 500; line-height: 26px; letter-spacing: 0em; text-align: center; transition: color 0.3s ease 0s;">Calendar</button></a><button
+                        class="p-0 bg-transparent relative">
+                        <div class="flex items-center space-x-1 h-full text-black dark:text-white hover:text-[#F6DC00] dark:hover:text-[#FEFF4A]"
+                            style="font-family: DM Mono; background-color: transparent; border-radius: 20px; border: medium; padding: 5px; cursor: pointer; font-size: 20px; font-weight: 500; line-height: 26px; letter-spacing: 0em; text-align: center; transition: color 0.3s ease 0s;">
+                            <span>Socials</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+                                <path d="M6 9L12 15L18 9" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg></div>
+                    </button></div>
+                <div class="Navbar_rightMostMenu__bEqE0">
+                    <div class="flex flex-row-reverse xl1:flex-row justify-between items-center gap-[30px] w-full">
+                        <button
+                            class="w-12 h-6 relative rounded-full transition duration-800 group bg-[#F5F5F5] dark:bg-[#2C2C2C]">
+                            <div
+                                class="absolute top-[1.85px] w-[20.31px] h-[20.31px] rounded-full transition-all duration-800 left-[2px] bg-[#2C2C2C] dark:left-[25.53px] dark:bg-white">
+                            </div>
+                        </button>
+                        <div class="flex items-center">
+                            <div><button
+                                    style="display: flex; flex-direction: row; border: medium; cursor: pointer; background-color: transparent; gap: 20px; align-items: center;">
+                                    <div style="height: 45px; width: 45px;"><img
+                                            src="49d84d480ce145bdb5a3f56f94cabcd1fdca2f76.png"
+                                            style="border-radius: 25px; padding: 8px; height: 100%; width: 100%; object-fit: cover;"><input
+                                            type="file" style="display: none;"></div>
+                                    <div class="Navbar_usernameContainer__9Ib2V"><span
+                                            class="text-black dark:text-white"></span></div>
+                                    <div class="Navbar_dropDown__oCM3T">
+                                        <div class="DropDown_dropDown__xuzQd"><button type="button"
+                                                class="DropDown_link__dieJ7 undefined"><img
+                                                    src="1943e06a7120e6e4518df1a2d7f8b5c804742319.png"></button>
+                                            <div class="DropDown_dropDownMenu__ciHaI bg-white dark:bg-[#1c1c1b] ">
+                                                <div><input type="text" placeholder="API Key"
+                                                        class="text-[#00000080] bg-[#F5F5F5] dark:text-white dark:bg-[#262624]"
+                                                        value=""></div>
+                                                <div><input type="text" placeholder="API Secret"
+                                                        class="text-[#00000080] bg-[#F5F5F5] dark:text-white dark:bg-[#262624]"
+                                                        value=""></div><button
+                                                    class="Navbar_dropDownButton__Swg7p bg-[#FFEB47] dark:bg-[#feff4a]">Submit</button><button
+                                                    class="Navbar_dropDownButton__Swg7p bg-[#FFEB47] dark:bg-[#feff4a]">How
+                                                    to get API Keys?</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button></div>
+                            <div><button
+                                    style="display: flex; flex-direction: row; border: medium; cursor: pointer; background-color: transparent; gap: 20px; align-items: center;">
+                                    <div><a style="text-decoration: none;"
+                                            href="https://lemonterminal.com/signin"><button
+                                                class="Navbar_signInButton__4oaPF bg-[#FFEB47] dark:bg-[#feff4a]">Sign
+                                                In</button></a></div>
+                                </button></div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="mt-[-1px] bg-[#F5F5F5] dark:bg-[#161615]">
+            <div class="Main_MainContainer__kvAOs">
+                <div class="tradingview-widget-container Charts_Charts__Ev0Re border-white dark:border-[#1c1c1b]"
+                    id="lightweight-chart" style="height: 100%;">
+                    <div id="tradingview_68249" style="height: 100%;">
+                        <div id="tradingview_79189-wrapper"
+                            style="position: relative; box-sizing: content-box; margin: 0px auto !important; padding: 0px !important; font-family: -apple-system, BlinkMacSystemFont, &quot;Trebuchet MS&quot;, Roboto, Ubuntu, sans-serif; width: 100%; height: 100%;">
+                            <iframe title="advanced chart TradingView widget" lang="en" id="tradingview_79189"
+                                style="width: 100%; height: 100%; margin: 0px !important; padding: 0px !important;"
+                                frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen="true"
+                                src="index_1.html#%7B%22symbol%22%3A%22BINANCE%3ABTCUSDT.P%22%2C%22frameElementId%22%3A%22tradingview_79189%22%2C%22interval%22%3A%2215%22%2C%22hide_top_toolbar%22%3A%221%22%2C%22hide_side_toolbar%22%3A%221%22%2C%22allow_symbol_change%22%3A%220%22%2C%22save_image%22%3A%220%22%2C%22backgroundColor%22%3A%22white%22%2C%22gridColor%22%3A%22rgba(129%2C%20139%2C%20166%2C%200.2)%22%2C%22studies%22%3A%22%5B%5D%22%2C%22theme%22%3A%22light%22%2C%22style%22%3A%221%22%2C%22timezone%22%3A%22Asia%2FTbilisi%22%2C%22studies_overrides%22%3A%22%7B%5C%22volume.volume.color.0%5C%22%3A%5C%22%2321b36c%5C%22%2C%5C%22volume.volume.color.1%5C%22%3A%5C%22%23F56565%5C%22%7D%22%2C%22utm_source%22%3A%22lemonterminal.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22chart%22%2C%22utm_term%22%3A%22BINANCE%3ABTCUSDT.P%22%2C%22page-uri%22%3A%22lemonterminal.com%2F%22%7D"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="LongShort_container__9lM08 bg-white dark:bg-[#1c1c1b] text-black dark:text-white">
+                    <div class="LongShort_title__eLStY bg-[#F5F5F5] dark:bg-[#262624]"><span
+                            class="LongShort_formLabel__w9ol3 text-black dark:text-white">Limit Order</span><span
+                            class="text-[#E2E8F0] dark:text-white"> | </span><span
+                            class="text-[#00000080] dark:text-[#FFFFFF80]">Market Order</span></div>
+                    <div>
+                        <p style="padding-inline: 0.5rem; margin: 0px 0px 1rem;">Available Balance: USDT</p>
+                    </div>
+                    <div class="LongShort_buttons__IQhac"><button
+                            class="bg-[#F5F5F5] dark:bg-[#262624] text-black dark:text-white LongShort_button__df5YV LongShort_selectedButton__Mggj0 border-[#FFEB47] dark:border-[#feff4a]">Cross</button><button
+                            class="bg-[#F5F5F5] dark:bg-[#262624] text-black dark:text-white LongShort_button__df5YV">Isolated</button>
+                    </div>
+                    <div>
+                        <div class="LimitOrder_inputField__KTXiC"><select name="selectType" id="selectType"
+                                class="LimitOrder_input__16tEQ text-[#00000080] bg-[#F5F5F5] dark:text-white dark:bg-[#262624]">
+                                <option value="BTCUSDT" selected="selected">BTCUSDT</option>
+                                <option value="ETHUSDT">ETHUSDT</option>
+                                <option value="BCHUSDT">BCHUSDT</option>
+                                <option value="XRPUSDT">XRPUSDT</option>
+                                <option value="EOSUSDT">EOSUSDT</option>
+                                <option value="LTCUSDT">LTCUSDT</option>
+                                <option value="TRXUSDT">TRXUSDT</option>
+                                <option value="ETCUSDT">ETCUSDT</option>
+                                <option value="LINKUSDT">LINKUSDT</option>
+                                <option value="XLMUSDT">XLMUSDT</option>
+                                <option value="ADAUSDT">ADAUSDT</option>
+                                <option value="XMRUSDT">XMRUSDT</option>
+                                <option value="DASHUSDT">DASHUSDT</option>
+                                <option value="ZECUSDT">ZECUSDT</option>
+                                <option value="XTZUSDT">XTZUSDT</option>
+                                <option value="BNBUSDT">BNBUSDT</option>
+                                <option value="ATOMUSDT">ATOMUSDT</option>
+                                <option value="ONTUSDT">ONTUSDT</option>
+                                <option value="IOTAUSDT">IOTAUSDT</option>
+                                <option value="BATUSDT">BATUSDT</option>
+                                <option value="VETUSDT">VETUSDT</option>
+                                <option value="NEOUSDT">NEOUSDT</option>
+                                <option value="QTUMUSDT">QTUMUSDT</option>
+                                <option value="IOSTUSDT">IOSTUSDT</option>
+                                <option value="THETAUSDT">THETAUSDT</option>
+                                <option value="ALGOUSDT">ALGOUSDT</option>
+                                <option value="ZILUSDT">ZILUSDT</option>
+                                <option value="KNCUSDT">KNCUSDT</option>
+                                <option value="ZRXUSDT">ZRXUSDT</option>
+                                <option value="COMPUSDT">COMPUSDT</option>
+                                <option value="OMGUSDT">OMGUSDT</option>
+                                <option value="DOGEUSDT">DOGEUSDT</option>
+                                <option value="SXPUSDT">SXPUSDT</option>
+                                <option value="KAVAUSDT">KAVAUSDT</option>
+                                <option value="BANDUSDT">BANDUSDT</option>
+                                <option value="RLCUSDT">RLCUSDT</option>
+                                <option value="WAVESUSDT">WAVESUSDT</option>
+                                <option value="MKRUSDT">MKRUSDT</option>
+                                <option value="SNXUSDT">SNXUSDT</option>
+                                <option value="DOTUSDT">DOTUSDT</option>
+                                <option value="DEFIUSDT">DEFIUSDT</option>
+                                <option value="YFIUSDT">YFIUSDT</option>
+                                <option value="BALUSDT">BALUSDT</option>
+                                <option value="CRVUSDT">CRVUSDT</option>
+                                <option value="TRBUSDT">TRBUSDT</option>
+                                <option value="RUNEUSDT">RUNEUSDT</option>
+                                <option value="SUSHIUSDT">SUSHIUSDT</option>
+                                <option value="EGLDUSDT">EGLDUSDT</option>
+                                <option value="SOLUSDT">SOLUSDT</option>
+                                <option value="ICXUSDT">ICXUSDT</option>
+                                <option value="STORJUSDT">STORJUSDT</option>
+                                <option value="BLZUSDT">BLZUSDT</option>
+                                <option value="UNIUSDT">UNIUSDT</option>
+                                <option value="AVAXUSDT">AVAXUSDT</option>
+                                <option value="FTMUSDT">FTMUSDT</option>
+                                <option value="ENJUSDT">ENJUSDT</option>
+                                <option value="FLMUSDT">FLMUSDT</option>
+                                <option value="TOMOUSDT">TOMOUSDT</option>
+                                <option value="RENUSDT">RENUSDT</option>
+                                <option value="KSMUSDT">KSMUSDT</option>
+                                <option value="NEARUSDT">NEARUSDT</option>
+                                <option value="AAVEUSDT">AAVEUSDT</option>
+                                <option value="FILUSDT">FILUSDT</option>
+                                <option value="RSRUSDT">RSRUSDT</option>
+                                <option value="LRCUSDT">LRCUSDT</option>
+                                <option value="MATICUSDT">MATICUSDT</option>
+                                <option value="OCEANUSDT">OCEANUSDT</option>
+                                <option value="BELUSDT">BELUSDT</option>
+                                <option value="CTKUSDT">CTKUSDT</option>
+                                <option value="AXSUSDT">AXSUSDT</option>
+                                <option value="ALPHAUSDT">ALPHAUSDT</option>
+                                <option value="ZENUSDT">ZENUSDT</option>
+                                <option value="SKLUSDT">SKLUSDT</option>
+                                <option value="GRTUSDT">GRTUSDT</option>
+                                <option value="1INCHUSDT">1INCHUSDT</option>
+                                <option value="CHZUSDT">CHZUSDT</option>
+                                <option value="SANDUSDT">SANDUSDT</option>
+                                <option value="ANKRUSDT">ANKRUSDT</option>
+                                <option value="LITUSDT">LITUSDT</option>
+                                <option value="UNFIUSDT">UNFIUSDT</option>
+                                <option value="REEFUSDT">REEFUSDT</option>
+                                <option value="RVNUSDT">RVNUSDT</option>
+                                <option value="SFPUSDT">SFPUSDT</option>
+                                <option value="XEMUSDT">XEMUSDT</option>
+                                <option value="COTIUSDT">COTIUSDT</option>
+                                <option value="CHRUSDT">CHRUSDT</option>
+                                <option value="MANAUSDT">MANAUSDT</option>
+                                <option value="ALICEUSDT">ALICEUSDT</option>
+                                <option value="HBARUSDT">HBARUSDT</option>
+                                <option value="ONEUSDT">ONEUSDT</option>
+                                <option value="LINAUSDT">LINAUSDT</option>
+                                <option value="STMXUSDT">STMXUSDT</option>
+                                <option value="DENTUSDT">DENTUSDT</option>
+                                <option value="CELRUSDT">CELRUSDT</option>
+                                <option value="HOTUSDT">HOTUSDT</option>
+                                <option value="MTLUSDT">MTLUSDT</option>
+                                <option value="OGNUSDT">OGNUSDT</option>
+                                <option value="NKNUSDT">NKNUSDT</option>
+                                <option value="DGBUSDT">DGBUSDT</option>
+                                <option value="1000SHIBUSDT">1000SHIBUSDT</option>
+                                <option value="BAKEUSDT">BAKEUSDT</option>
+                                <option value="GTCUSDT">GTCUSDT</option>
+                                <option value="BTCDOMUSDT">BTCDOMUSDT</option>
+                                <option value="IOTXUSDT">IOTXUSDT</option>
+                                <option value="AUDIOUSDT">AUDIOUSDT</option>
+                                <option value="C98USDT">C98USDT</option>
+                                <option value="MASKUSDT">MASKUSDT</option>
+                                <option value="ATAUSDT">ATAUSDT</option>
+                                <option value="DYDXUSDT">DYDXUSDT</option>
+                                <option value="1000XECUSDT">1000XECUSDT</option>
+                                <option value="GALAUSDT">GALAUSDT</option>
+                                <option value="CELOUSDT">CELOUSDT</option>
+                                <option value="ARUSDT">ARUSDT</option>
+                                <option value="KLAYUSDT">KLAYUSDT</option>
+                                <option value="ARPAUSDT">ARPAUSDT</option>
+                                <option value="CTSIUSDT">CTSIUSDT</option>
+                                <option value="LPTUSDT">LPTUSDT</option>
+                                <option value="ENSUSDT">ENSUSDT</option>
+                                <option value="PEOPLEUSDT">PEOPLEUSDT</option>
+                                <option value="ANTUSDT">ANTUSDT</option>
+                                <option value="ROSEUSDT">ROSEUSDT</option>
+                                <option value="DUSKUSDT">DUSKUSDT</option>
+                                <option value="FLOWUSDT">FLOWUSDT</option>
+                                <option value="IMXUSDT">IMXUSDT</option>
+                                <option value="API3USDT">API3USDT</option>
+                                <option value="GMTUSDT">GMTUSDT</option>
+                                <option value="APEUSDT">APEUSDT</option>
+                                <option value="WOOUSDT">WOOUSDT</option>
+                                <option value="JASMYUSDT">JASMYUSDT</option>
+                                <option value="DARUSDT">DARUSDT</option>
+                                <option value="GALUSDT">GALUSDT</option>
+                                <option value="OPUSDT">OPUSDT</option>
+                                <option value="INJUSDT">INJUSDT</option>
+                                <option value="STGUSDT">STGUSDT</option>
+                                <option value="FOOTBALLUSDT">FOOTBALLUSDT</option>
+                                <option value="SPELLUSDT">SPELLUSDT</option>
+                                <option value="1000LUNCUSDT">1000LUNCUSDT</option>
+                                <option value="LUNA2USDT">LUNA2USDT</option>
+                                <option value="LDOUSDT">LDOUSDT</option>
+                                <option value="CVXUSDT">CVXUSDT</option>
+                                <option value="ICPUSDT">ICPUSDT</option>
+                                <option value="APTUSDT">APTUSDT</option>
+                                <option value="QNTUSDT">QNTUSDT</option>
+                                <option value="BLUEBIRDUSDT">BLUEBIRDUSDT</option>
+                                <option value="FETUSDT">FETUSDT</option>
+                                <option value="FXSUSDT">FXSUSDT</option>
+                                <option value="HOOKUSDT">HOOKUSDT</option>
+                                <option value="MAGICUSDT">MAGICUSDT</option>
+                                <option value="TUSDT">TUSDT</option>
+                                <option value="RNDRUSDT">RNDRUSDT</option>
+                                <option value="HIGHUSDT">HIGHUSDT</option>
+                                <option value="MINAUSDT">MINAUSDT</option>
+                                <option value="ASTRUSDT">ASTRUSDT</option>
+                                <option value="AGIXUSDT">AGIXUSDT</option>
+                                <option value="PHBUSDT">PHBUSDT</option>
+                                <option value="GMXUSDT">GMXUSDT</option>
+                                <option value="CFXUSDT">CFXUSDT</option>
+                                <option value="STXUSDT">STXUSDT</option>
+                                <option value="BNXUSDT">BNXUSDT</option>
+                                <option value="ACHUSDT">ACHUSDT</option>
+                                <option value="SSVUSDT">SSVUSDT</option>
+                                <option value="CKBUSDT">CKBUSDT</option>
+                                <option value="USDT">USDT</option>
+                                <option value="TRUUSDT">TRUUSDT</option>
+                                <option value="LQTYUSDT">LQTYUSDT</option>
+                                <option value="USDCUSDT">USDCUSDT</option>
+                                <option value="IDUSDT">IDUSDT</option>
+                                <option value="ARBUSDT">ARBUSDT</option>
+                                <option value="JOEUSDT">JOEUSDT</option>
+                                <option value="TLMUSDT">TLMUSDT</option>
+                                <option value="AMBUSDT">AMBUSDT</option>
+                                <option value="LEVERUSDT">LEVERUSDT</option>
+                                <option value="RDNTUSDT">RDNTUSDT</option>
+                                <option value="HFTUSDT">HFTUSDT</option>
+                                <option value="XVSUSDT">XVSUSDT</option>
+                                <option value="BLURUSDT">BLURUSDT</option>
+                                <option value="EDUUSDT">EDUUSDT</option>
+                                <option value="IDEXUSDT">IDEXUSDT</option>
+                                <option value="SUIUSDT">SUIUSDT</option>
+                                <option value="1000PEPEUSDT">1000PEPEUSDT</option>
+                                <option value="1000FLOKIUSDT">1000FLOKIUSDT</option>
+                                <option value="UMAUSDT">UMAUSDT</option>
+                                <option value="RADUSDT">RADUSDT</option>
+                                <option value="KEYUSDT">KEYUSDT</option>
+                                <option value="COMBOUSDT">COMBOUSDT</option>
+                            </select></div>
+                        <div style="display: flex;">
+                            <div class="LimitOrder_inputField__KTXiC"><input type="number" placeholder="Price"
+                                    class="LimitOrder_input__16tEQ text-[#00000080] bg-[#F5F5F5] dark:text-white dark:bg-[#262624]"
+                                    value=""></div>
+                            <div class="LimitOrder_inputField__KTXiC"><input type="number" placeholder="Leverage"
+                                    class="LimitOrder_input__16tEQ text-[#00000080] bg-[#F5F5F5] dark:text-white dark:bg-[#262624]"
+                                    value=""></div>
+                        </div>
+                        <div class="LimitOrder_inputField__KTXiC"><input type="text" placeholder="Quantity"
+                                class="LimitOrder_input__16tEQ text-[#00000080] bg-[#F5F5F5] dark:text-white dark:bg-[#262624]"
+                                value=""></div>
+                        <div class="LimitOrder_inputField__KTXiC LimitOrder_price__H1WTr"><button
+                                class="LimitOrder_inputButton__NBS-w bg-[#F5F5F5] dark:bg-[#262624] text-black dark:text-white">25%</button><button
+                                class="LimitOrder_inputButton__NBS-w bg-[#F5F5F5] dark:bg-[#262624] text-black dark:text-white">50%</button><button
+                                class="LimitOrder_inputButton__NBS-w bg-[#F5F5F5] dark:bg-[#262624] text-black dark:text-white">75%</button><button
+                                class="LimitOrder_inputButton__NBS-w bg-[#F5F5F5] dark:bg-[#262624] text-black dark:text-white">100%</button>
+                        </div>
+                        <div class="LimitOrder_buttons__Fbt5E"><button
+                                class="LimitOrder_actionButton__JmX8p bg-[#FFEB47] dark:bg-[#FEFF4A]">Long</button><button
+                                class="LimitOrder_actionButton__JmX8p bg-[#F56565] dark:bg-[#F56565] text-white dark:text-black">Short</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="Chats_mainContainer__LauXG bg-white dark:bg-[#1c1c1b] text-black dark:text-white">
+                    <div class="Chats_titleContainer__11vEa">
+                        <div class="bg-[#F5F5F5] dark:bg-[#262624] Chats_option__gSukQ " style="position: relative;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                fill="none" stroke="currentColor">
+                                <path
+                                    d="M13.6002 8.25C14.0366 12.2816 15.75 13.5 15.75 13.5H2.25C2.25 13.5 4.5 11.9 4.5 6.3C4.5 5.02696 4.97411 3.80606 5.81802 2.90589C6.66193 2.00571 7.80652 1.5 9 1.5C9.25298 1.5 9.50378 1.52272 9.75 1.56712"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path
+                                    d="M14.25 6C15.4927 6 16.5 4.99264 16.5 3.75C16.5 2.50736 15.4927 1.5 14.25 1.5C13.0073 1.5 12 2.50736 12 3.75C12 4.99264 13.0073 6 14.25 6Z"
+                                    fill="#FFEB47" stroke="#FFEB47" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path
+                                    d="M10.2971 15.75C10.1653 15.9773 9.97607 16.166 9.7483 16.2971C9.5206 16.4283 9.26245 16.4974 8.99965 16.4974C8.73685 16.4974 8.4787 16.4283 8.251 16.2971C8.0233 16.166 7.834 15.9773 7.70215 15.75"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg><span>Public Chat</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M6 9L12 15L18 9" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg></div>
+                    </div>
+                    <div class="DiscussionChat_wrapper__ztYNd">
+                        <div class="DiscussionChat_chatContainer__9Gk1A"></div>
+                    </div>
+                    <div class="Chats_messageInputContainer__wotum bg-[#F5F5F5] dark:bg-[#262624]"><input type="text"
+                            placeholder="Type a message to chat..."
+                            class="Chats_messageInput__Q8aFH text-[#00000080] dark:text-white" value=""><svg
+                            class="ml-3 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                            viewBox="0 0 22 22" fill="currentColor" stroke="currentColor">
+                            <path
+                                d="M4.78227 3.37759L17.6228 10.6004C17.9343 10.7757 17.9343 11.2241 17.6228 11.3994L4.78227 18.6221C4.40717 18.8332 3.97441 18.4576 4.13043 18.0566L6.81003 11.166C6.85165 11.0592 6.85165 10.9406 6.81003 10.8338L4.13043 3.94318C3.97441 3.54211 4.40717 3.16662 4.78227 3.37759Z"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></div>
+                </div>
+                <div class="News_mainContainer__NRAih">
+                    <h2 class="News_title__X7ehU text-black dark:text-white">News</h2>
+                    <div class="News_newsWrapper__kuzz7 bg-white dark:bg-[#1c1c1b] text-black dark:text-white">
+                        <div class="News_newsContainer__xClyV overflow-auto"></div>
+                    </div>
+                </div>
+                <div class="PositionsAndOrder_mainContainer__s264L hidden xl1:block">
+                    <h2 class="PositionsAndOrder_title__4wg3F"><span
+                            class="PositionsAndOrder_titlePositions__6Lyro text-black dark:text-white"
+                            style="font-size: 20px;">Positions ()</span><span class="text-[#E2E8F0]"> | </span><span
+                            class="PositionsAndOrder_titleOpenOrders__pvb55 text-[#00000080] dark:text-[#FFFFFF80]"
+                            style="font-size: 16px;">Open Orders ()</span></h2>
+                    <div class="PositionsAndOrder_tableContainer__KYB4D"></div>
+                </div>
+                <div class="PositionsAndOrder_mainContainer__s264L block xl1:hidden">
+                    <h2 class="PositionsAndOrder_title__4wg3F"><span
+                            class="PositionsAndOrder_titlePositions__6Lyro text-black dark:text-white"
+                            style="font-size: 20px;">Positions ()</span></h2>
+                    <div class="PositionsAndOrder_tableContainer__KYB4D"></div>
+                    <h2 class="PositionsAndOrder_title__4wg3F mt-5"><span
+                            class="PositionsAndOrder_titleOpenOrders__pvb55 text-black dark:text-white"
+                            style="font-size: 20px;">Open Orders ()</span></h2>
+                    <div class="PositionsAndOrder_tableContainer__KYB4D"></div>
+                </div>
+                <div class="TwitterFeed_mainContainer__q5uTs">
+                    <h2 class="TwitterFeed_title__9yLYs text-black dark:text-white">Twitter Feed</h2>
+                    <div
+                        class="TwitterFeed_twitterFeedWrapper__LVjDz bg-white dark:bg-[#1c1c1b] text-black dark:text-white">
+                        <div class="TwitterFeed_twitterFeedContainer__xkYpL overflow-auto">
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/coinbase/status/1737224429518963179"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Coinbase
+                                            🛡️📞 (@coinbase)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">15min ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> Crypto moves money forward.
+
+                                    We'll see you in 2024. #UpdateTheSystem https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/trondao/status/1737223895374004724"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">TRON DAO
+                                            (@trondao)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">17min ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> In the #blockchain industry, education is
+                                    key. 🔑 That's why we organize events to help people learn and grow. 🤗
+
+                                    In the process, we get to see amazing innovative solutions and meet the people who
+                                    are actively working to shape the future. 🚀 https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/TheBlock__/status/1737223127204077839"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">The Block
+                                            (@TheBlock__)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">20min ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> Ethos leverages EigenLayer to introduce
+                                    validator protocol for Cosmos chains https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/theblockupdates/status/1737222523379491228"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">The Block
+                                            Pro Headlines (@theblockupdates)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">23min ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> *SEC'S OFFICE OF MARKET SUPERVISION, DIVISION
+                                    OF TRADING AND MARKETS MET WITH BLACKROCK OFFICIALS ON DEC. 19 ABOUT SPOT BITCOIN
+                                    ETF - THE BLOCK PRO</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/SkaleNetwork/status/1737220935315522000"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">SKALE
+                                            (@SkaleNetwork)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">29min ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> 🎮 @SpellsofGenesis is now playable on SKALE
+                                    Network, marking a significant leap in blockchain gaming!
+
+                                    Experience the merger of strategy and action in this innovative Trading Card Game,
+                                    offering true asset ownership.
+
+                                    Play now</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/_RichardTeng/status/1737216826222772657"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Richard Teng
+                                            (@_RichardTeng)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">45min ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> It's always a pleasure to connect with the
+                                    #Binance Angels!
+
+                                    Thank you for your unwavering support of Binance and crypto 🙏 https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/EthernityChain/status/1737216411398012944"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">ETHERNITY
+                                            (@EthernityChain)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">47min ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> $ERN 🤝 $BCUT
+
+                                    Exciting Update! @EthernityChain is thrilled to announce our partnership with
+                                    @bitsCrunch!
+
+                                    Together, we're bringing NFT-Fi to the next level with unparalleled IP protection
+                                    and sophisticated analytics to help brands protect their IP, beginning with our
+                                    Bruce Lee… https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/Grayscale/status/1737215094998851707"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Grayscale
+                                            (@Grayscale)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">52min ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> Grayscale #CryptoSectors is a new framework
+                                    designed to set the standard for organizing the crypto asset class. Find out more in
+                                    an exclusive webinar presented with @RIAChannel</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/reserveprotocol/status/1737212569386205384"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Reserve
+                                            (@reserveprotocol)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">1h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> 1/ Partnership Proposal 📜
+
+                                    @divastaking pre-launch campaign on @BuildOnBase with RTokens 🔵
+
+                                    Base presents an opportunity for Diva's unique distributed validator technology -
+                                    divETH can have signficant L2 presence at launch
+
+                                    Learn about Diva &amp; Reserve's Base growth plan 👇 https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/CoinDesk/status/1737209207995466128"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">CoinDesk
+                                            (@CoinDesk)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">1h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> With substantial developer communities,
+                                    flourishing Web3 scenes, and a headstart in SocialFi, Asia’s blockchain hotpots are
+                                    primed to lead the next cycle of crypto adoption, says @amandacassatt.
+
+                                    Opinion #crypto2024
+
+                                    https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/decentraland/status/1737208202352001213"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Decentraland
+                                            (@decentraland)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">1h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> @DecentralGames @LastSliceCo @Vroomwayio
+                                    @KnightsOfAntrom @angzaar For more info</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/CoinDesk/status/1737203924359401909"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">CoinDesk
+                                            (@CoinDesk)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">1h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> S&amp;P's stablecoin report may not convince
+                                    a DeFi degen from using supposedly riskier stablecoins like tether or dai, but it
+                                    may slow the rate of adoption for the first crypto tool with product-market fit,
+                                    @danielgkuhn writes.
+
+                                    Opinion.
+                                    https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/elonmusk/status/1737203493172039956"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Elon Musk
+                                            (@elonmusk)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">1h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> @chrispavlovski Good point!</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/CoinDesk/status/1737202188428964150"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">CoinDesk
+                                            (@CoinDesk)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">1h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> As the price of $BTC by market capitalization
+                                    has climbed roughly 150% in 2023, "CoinDesk Daily" host @JennSanasie breaks down
+                                    what big institutions are expecting for next year. #Crypto2024
+
+                                    Watch 👇 https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/SEC_Investor_Ed/status/1737201780805525924"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">SEC Investor
+                                            Ed (@SEC_Investor_Ed)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">1h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> Have questions about index funds or other
+                                    investment products? http</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/Immutable/status/1737201134299648143"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Immutable
+                                            (@Immutable)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">1h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> Immutable is happy to announce a three-way
+                                    partnership with @playmetalcore and @HLV_XYZ!
+
+                                    With the help of Horizen Labs Ventures, we plan on bringing MetalCore’s web3
+                                    experience to millions of mainstream players worldwide. https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/CoinDesk/status/1737200890262569324"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">CoinDesk
+                                            (@CoinDesk)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">1h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> "The 'in-it-for-tech' narrative simply won’t
+                                    cut it in the next phase of adoption," @artdoctorphd. It’s high time for Web3
+                                    companies to develop an obsession for their brand images.
+
+                                    Opinion for #Crypto2024
+                                    https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/civickey/status/1737198479158739388"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Civic
+                                            (@civickey)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">1h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> Scam Alert</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/CoinDesk/status/1737195423889310115"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">CoinDesk
+                                            (@CoinDesk)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">2h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> Biggest development on Wall Street in the
+                                    last 30 years, says @saylor of the coming spot #bitcoin ETFs.
+
+                                    @SteveAlpher reports
+                                    https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/CoinDesk/status/1737195172482683363"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">CoinDesk
+                                            (@CoinDesk)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">2h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> After $BONK, Saga phone owners get another
+                                    airdrop</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/OrchidProtocol/status/1737193063368233067"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Orchid
+                                            (@OrchidProtocol)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">2h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> Class time! Learn more about decentralized
+                                    data storage and how we can store them durably and efficiently, with our very own
+                                    mathematician @drchloavery🎁 https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/AlienWorlds/status/1737193028261970352"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Alien Worlds
+                                            Official (@AlienWorlds)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">2h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> 📢 Attention Explorers, #GalacticHubs and
+                                    @LightningWorks7 are thrilled to introduce "Starblind," a concise five-page teaser
+                                    comic that unveils #AlienWorlds' rich lore and storytelling potential. Packed with
+                                    characters, villains, easter eggs, foreshadowing, and a gripping… https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/big_cases/status/1737192662149837106"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Big Cases
+                                            Bot (@big_cases)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">2h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> New filing</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/big_cases/status/1737192643615207756"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Big Cases
+                                            Bot (@big_cases)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">2h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> New filing</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/big_cases/status/1737192637579563350"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Big Cases
+                                            Bot (@big_cases)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">2h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> New filing</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/StellarOrg/status/1737192050377003348"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Stellar
+                                            (@StellarOrg)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">2h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> With the technical pieces now in place, the
+                                    Stellar network validators have agreed to a January 30 vote on the Mainnet upgrade
+                                    to Protocol 20, which should give the ecosystem time to prepare by installing
+                                    relevant software.
+
+                                    If you are building on Stellar, please review the…</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/CoinDesk/status/1737189972099154411"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">CoinDesk
+                                            (@CoinDesk)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">2h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> The strength and vibrancy of crypto
+                                    communities are integral to the success and sustainability of the broader
+                                    cryptocurrency ecosystem.
+
+                                    Sponsored content by @phemex_official</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/CoinDesk/status/1737189846542664091"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">CoinDesk
+                                            (@CoinDesk)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">2h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> .@StellarOrg sets 1H 2024 for phased rollout
+                                    of 'Soroban' smart contracts- - details in Protocol Village by @liqquidity $XLM
+                                    https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/lindayaX/status/1737187625658671129"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Linda
+                                            Yaccarino (@lindayaX)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">2h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> We’ve crossed 750,000 active jobs that users
+                                    can now apply to on @XHiring -- and it's only been 6 months. Its simplicity is key.
+                                    This is going to be the go-to spot for job seekers and recruiters. Congrats to the
+                                    team.</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/trondao/status/1737186968159531459"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">TRON DAO
+                                            (@trondao)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">2h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> Don't pay more in gas fees. 😢 Come use the
+                                    #TRON Network instead. 😎
+
+                                    Compare average gas prices for #ETH and #TRON</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/hashflow/status/1737186813888868570"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">hashflow
+                                            (@hashflow)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">2h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> Nothing spooky about this partnership ~
+                                    Here’s how to use your @phantom wallet on 2.0 👻💜 https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/Holochain/status/1737186756334694630"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Holochain
+                                            (@Holochain)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">2h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> 🌐 The upcoming Network-RC for @H_O_L_O_
+                                    hosting in December isn't just a milestone; it's a quantum leap. The hosting network
+                                    will be bringing #decentralized Holochain applications to your browser.
+
+                                    ➡️ Read Holo’s Lead/Org https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/saylor/status/1737186267148832795" target="_blank"
+                                            rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Michael
+                                            Saylor⚡️ (@saylor)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">2h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> The $BTC Spot ETF may be the biggest
+                                    development on Wall Street in the last 30 years. My discussion of #Bitcoin in 2024,
+                                    Spot ETFs vs. $MSTR, and the emergence of bitcoin as a treasury reserve asset with
+                                    @KaileyLeinz on Bloomberg @Crypto. https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/CoinDesk/status/1737182910866993387"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">CoinDesk
+                                            (@CoinDesk)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">3h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> Mastering the art of crypto asset recovery,
+                                    @cryptogle’s innovative techniques have helped retrieve millions lost in hacks.
+
+                                    He’s a crucial figure in safeguarding digital assets. That's why he's part of
+                                    CoinDesk's #MostInfluential2023</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/circle/status/1737182867103584679" target="_blank"
+                                            rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Circle
+                                            (@circle)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">3h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> Asia is embracing digital finance. Regulators
+                                    around the region are leading the charge on responsible innovation and adoption of
+                                    digital currencies like $USDC.
+
+                                    Hear more from our team on the momentum and benefits of digital currency
+                                    transformation in the APAC region. https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/TraderJoe_xyz/status/1737181441019060680"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Trader Joe
+                                            (@TraderJoe_xyz)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">3h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> Streamlining a Crypto Wallet Setup</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/CoinDesk/status/1737179330583699853"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">CoinDesk
+                                            (@CoinDesk)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">3h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> "By nearly any metric, the majority of
+                                    blockchain activity occurs within Ethereum’s ecosystem, making ether the most
+                                    utilized token," @methodiccapital CEO Jason Hall says.
+
+                                    Read the full Q&amp;A by @KimG_Marketing of CoinDesk Indices</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/MoonbeamNetwork/status/1737178586011046105"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Moonbeam
+                                            Network (@MoonbeamNetwork)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">3h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> 1/ 🎮 Gamers gon' game. ⛽️ Not pay gas fees
+                                    for transactions.
+
+                                    That’s one reason why Moonbeam’s precompiled contracts help DApps lower the barrier
+                                    to entry for gamers and provide seamless Web3 gaming experiences!
+
+                                    👉 Learn more with Moonbeam Docs</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/CoinDesk/status/1737174997419110792"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">CoinDesk
+                                            (@CoinDesk)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">3h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> From possible approval of spot Bitcoin ETFs
+                                    in January to the fourth "Halving" expected in April, it promises to be a momentous
+                                    year for #Bitcoin.
+
+                                    @coryklippsten sees a "high probability of a bull market in 2024 and 2025."
+
+                                    Opinion #crypto2024
+
+                                    https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/TheBlock__/status/1737174688739033341"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">The Block
+                                            (@TheBlock__)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">3h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> BloXrout will reject transactions with
+                                    OFAC-blacklisted addresses https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/DeItaone/status/1737174279106515235"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">*Walter
+                                            Bloomberg (@DeItaone)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">3h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> 🔸BITCOIN ETF APPROVAL TO BE A MAJOR
+                                    CATALYST, SAYLOR NOTES</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/lindayaX/status/1737173488396276216"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Linda
+                                            Yaccarino (@lindayaX)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">3h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> X is the most transparent platform. And we've
+                                    been committed to working with the EU Commission since day one. We'll continue to
+                                    protect free speech all over the world and it's also extremely important that
+                                    @ThierryBreton commits to fostering a regulatory environment that is… https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/zcash/status/1737171741246361899" target="_blank"
+                                            rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Zcash 🛡️
+                                            (@zcash)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">3h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> Why is Privacy so Important?
+
+                                    Privacy gives you the power to choose what and with whom you’ll share. It’s
+                                    essential for freedom, security, consent, and dignity.
+                                    #Zcash $ZEC https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/Shibtoken/status/1737171652558074266"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Shib
+                                            (@Shibtoken)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">3h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> 2/3
+                                    Mint this edition’s cover and read all the articles here</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/Shibtoken/status/1737171645398208621"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Shib
+                                            (@Shibtoken)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">3h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> 1/3
+                                    📣 OUT NOW 📣
+                                    Dive into the 7th edition of The Shib Magazine!
+                                    The historic significance of Shib's endeavor to become the first decentralized Web3
+                                    ecosystem to acquire its own Top-Level Domain, marking a major shift in internet
+                                    decentralization.
+                                    Mint this edition’s cover and… https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/jito_sol/status/1737171614934945860"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Jito
+                                            (@jito_sol)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">3h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> 1/ We’re excited to announce two massive
+                                    Stakenet milestones</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/CelerNetwork/status/1737170933549576615"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">CelerNetwork
+                                            (@CelerNetwork)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">3h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> 🎊We are excited to announce that #Celer
+                                    cBridge now supports @ichifoundation's $ICHI!
+                                    🌉Users are now able to bridge $ICHI between @ethereum and @BNBCHAIN quickly and
+                                    easily using cBridge!
+                                    ✅Give it a try yourself at</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/TheBlock__/status/1737170644998013113"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">The Block
+                                            (@TheBlock__)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">3h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> UK Finance Minister to probe banking
+                                    challenges faced by country's crypto firms https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/CoinDesk/status/1737169300652233162"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">CoinDesk
+                                            (@CoinDesk)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">3h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> .@PontemNetwork to launch new Ethereum
+                                    layer-2 network @LumioFDN on OP Stack; is compatible with Move, EVM - details in
+                                    Protocol Village by @liqquidity
+                                    https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/hashflow/status/1737168868005622154"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">hashflow
+                                            (@hashflow)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">3h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> The final boss of dexes…👀 https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/CoinDesk/status/1737167415098675312"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">CoinDesk
+                                            (@CoinDesk)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">4h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> EXCLUSIVE</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/StellarOrg/status/1737162794162925631"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Stellar
+                                            (@StellarOrg)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">4h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> 2/6 Additionally, the Stellar network
+                                    validators decided on a date for the vote to upgrade the Mainnet to Protocol 20 -
+                                    meant to happen on January 30. Get set for a phased rollout that's all about
+                                    rock-solid stability and top-notch security.</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/StellarOrg/status/1737162793126932743"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Stellar
+                                            (@StellarOrg)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">4h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> 1/6 Important news</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/CoinDesk/status/1737161922569495005"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">CoinDesk
+                                            (@CoinDesk)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">4h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> EXCLUSIVE</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/CoinDesk/status/1737161787118694733"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">CoinDesk
+                                            (@CoinDesk)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">4h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> More than 40 countries have taken steps to
+                                    increase create guidelines for the cryptocurrency industry and increase their
+                                    oversight of it, according to a new PwC report.
+
+                                    @LizKNapolitano reports
+
+                                    https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/_RichardTeng/status/1737160151822668159"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Richard Teng
+                                            (@_RichardTeng)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">4h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> #Binance has passed a comprehensive SOC 2
+                                    Type II compliance audit, affirming our dedication to strict security standards.
+
+                                    A trusted independent auditor validated our security measures, affirming
+                                    well-designed and appropriately implemented controls.
+
+                                    https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/CoinDesk/status/1737156353787916417"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">CoinDesk
+                                            (@CoinDesk)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">4h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> EXCLUSIVE</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/Blockworks_/status/1737156280999883166"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Blockworks
+                                            (@Blockworks_)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">4h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> The outlook for crypto — not just in the US,
+                                    but globally — was grim at this juncture last year, writes @KMSmithDC of
+                                    @BlockchainAssn</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/CelestiaOrg/status/1737156267645546650"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Celestia
+                                            (@CelestiaOrg)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">4h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> Introducing @arbitrum Orbit with Celestia
+                                    underneath ✨
+
+                                    Developers can now deploy an Orbit chain 🪐 on Arbitrum Sepolia with Celestia as
+                                    modular DA, complete with Nitro fraud proofs 🏎️ and Ethereum fallback. https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/avax/status/1737155852497531410" target="_blank"
+                                            rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Avalanche 🔺
+                                            (@avax)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">4h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> Need to ensure fair play in online
+                                    tournaments? Put ‘em on-chain.
+
+                                    Tiltyard, a new platform from the creators of the popular Crypto Raiders, is
+                                    bringing their novel approach to on-chain gaming to an Avalanche Subnet.
+
+                                    Read on about @tiltyard_gg and the new game coming with it.👇</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/Immutable/status/1737155833736093808"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">Immutable
+                                            (@Immutable)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">4h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> Draw your sword in the @MedievalEmpires
+                                    universe!
+
+                                    They have raised $7M+ in anticipation of the launch of their first game across PC,
+                                    MAC, and mobile being fully interoperable across all platforms.
+
+                                    http</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/CoinDesk/status/1737155298777825522"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">CoinDesk
+                                            (@CoinDesk)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">4h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> Crypto market outlooks for 2024 from a16z,
+                                    Fidelity, Coinbase, Pantera and more
+
+                                    https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/CoinDesk/status/1737153421856133580"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">CoinDesk
+                                            (@CoinDesk)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">4h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> U.K.'s Finance Minister Jeremy Hunt on
+                                    Tuesday agreed to have his ministry discuss banking troubles faced by crypto
+                                    companies in the country with @cryptoappg lawmakers.
+
+                                    By @iamsandali
+
+                                    https</p>
+                            </div>
+                            <div
+                                class="TwitterFeed_feed__e9gFM bg-[#F5F5F5] dark:bg-[#00000000] xl1:bg-transparent border-[#00000080] dark:border-[#FFFFFF80]">
+                                <div class="TwitterFeed_headLine__hERmy">
+                                    <h2 style="margin: 0px 16px 0px 0px; flex: 1 1 0%;" class="truncate"><a
+                                            href="https://twitter.com/TheBlock__/status/1737151925970231373"
+                                            target="_blank" rel="noreferrer"
+                                            class="TwitterFeed_titleLink__CSKUX text-black dark:text-white">The Block
+                                            (@TheBlock__)</a></h2>
+                                    <p class="text-[#00000080] dark:text-[#FFFFFF80]"
+                                        style="margin: 0px; white-space: nowrap;">5h ago</p>
+                                </div>
+                                <p class="TwitterFeed_description__BM-yx"> Bitcoin options open interest on CME reaches
+                                    all-time high https</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Toastify"></div>
+    </div>
+    <style>
+        .tradingview-widget-copyright {
+            font-size: 13px !important;
+            line-height: 32px !important;
+            text-align: center !important;
+            vertical-align: middle !important;
+            font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif !important;
+            color: #B2B5BE !important;
+        }
+
+        .tradingview-widget-copyright .blue-text {
+            color: #2962FF !important;
+        }
+
+        .tradingview-widget-copyright a {
+            text-decoration: none !important;
+            color: #B2B5BE !important;
+        }
+
+        .tradingview-widget-copyright a:visited {
+            color: #B2B5BE !important;
+        }
+
+        .tradingview-widget-copyright a:hover .blue-text {
+            color: #1E53E5 !important;
+        }
+
+        .tradingview-widget-copyright a:active .blue-text {
+            color: #1848CC !important;
+        }
+
+        .tradingview-widget-copyright a:visited .blue-text {
+            color: #2962FF !important;
+        }
+    </style>
+    <style>
+        .tradingview-widget-copyright {
+            font-size: 13px !important;
+            line-height: 32px !important;
+            text-align: center !important;
+            vertical-align: middle !important;
+            font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif !important;
+            color: #B2B5BE !important;
+        }
+
+        .tradingview-widget-copyright .blue-text {
+            color: #2962FF !important;
+        }
+
+        .tradingview-widget-copyright a {
+            text-decoration: none !important;
+            color: #B2B5BE !important;
+        }
+
+        .tradingview-widget-copyright a:visited {
+            color: #B2B5BE !important;
+        }
+
+        .tradingview-widget-copyright a:hover .blue-text {
+            color: #1E53E5 !important;
+        }
+
+        .tradingview-widget-copyright a:active .blue-text {
+            color: #1848CC !important;
+        }
+
+        .tradingview-widget-copyright a:visited .blue-text {
+            color: #2962FF !important;
+        }
+    </style>
+    <style>
+        .tradingview-widget-copyright {
+            font-size: 13px !important;
+            line-height: 32px !important;
+            text-align: center !important;
+            vertical-align: middle !important;
+            font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif !important;
+            color: #B2B5BE !important;
+        }
+
+        .tradingview-widget-copyright .blue-text {
+            color: #2962FF !important;
+        }
+
+        .tradingview-widget-copyright a {
+            text-decoration: none !important;
+            color: #B2B5BE !important;
+        }
+
+        .tradingview-widget-copyright a:visited {
+            color: #B2B5BE !important;
+        }
+
+        .tradingview-widget-copyright a:hover .blue-text {
+            color: #1E53E5 !important;
+        }
+
+        .tradingview-widget-copyright a:active .blue-text {
+            color: #1848CC !important;
+        }
+
+        .tradingview-widget-copyright a:visited .blue-text {
+            color: #2962FF !important;
+        }
+    </style>
+</body>
+
+</html>
